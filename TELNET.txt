@@ -1,0 +1,45 @@
+🧩 Step 1 — Install Telnet Client and Server
+
+Open the terminal and run:
+
+sudo apt update
+sudo apt install telnetd telnet xinetd -y
+
+
+
+
+🧩 Step 2 — Start the Telnet Service
+sudo systemctl start xinetd
+sudo systemctl enable xinetd
+
+
+
+🧩 Step 3 — Verify Telnet is Listening on Port 23
+sudo netstat -tulnp | grep 23
+
+
+🧩 Step 4 — Get Your IP (or Use Localhost)
+
+You can use:
+
+hostname -I
+
+
+or simply 127.0.0.1 for localhost.
+
+
+
+
+NOW OPEN DIFFERENT TERMINAL ASIDE 🚨
+🧩 Step 5 — Connect to Telnet Server (on Same Machine)
+
+In the same terminal or a new terminal window, type:
+
+telnet 127.0.0.1
+
+
+
+Enter your Linux username and password:
+
+login : xxxxx
+Password: ******

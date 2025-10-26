@@ -1,0 +1,197 @@
+
+1)ping google.com
+2)traceroute google.com
+3)nslookup google.com
+4)netstat -a
+5)arp -a
+6)rarp -a
+7)ip addr show
+  ip link show
+  ip route show
+8)ifconfig 
+9)dig google.com
+10)route 
+
+
+
+_____________________________SCROLL FOR DETAILED EXPLANATION ______________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+⚙️ 1️⃣ ping
+Purpose:
+Used to check connectivity between your system and another host (e.g., a website or IP).
+Syntax:
+ping <hostname or IP address>
+Example:
+ping google.com
+Explanation:
+Sends ICMP Echo Requests and waits for Echo Replies.
+Shows packet loss, time delay (latency), and confirms network connection.
+Press Ctrl + C to stop.
+
+
+⚙️ 2️⃣ traceroute
+Purpose:
+Shows the path (route) packets take from your system to a destination host.
+Syntax:
+traceroute <hostname or IP>
+Example:
+traceroute google.com
+Explanation:
+Displays each hop (router) along the way.
+Helps find network delays or where connection breaks.
+Each line = one router between your system and target.
+
+⚙️ 3️⃣ nslookup
+Purpose:
+Queries the DNS (Domain Name System) to find the IP address of a domain name.
+Syntax:
+nslookup <domain name>
+Example:
+nslookup google.com
+Explanation:
+Shows the IP address corresponding to a domain name.
+You can also do reverse lookup (IP → Domain).
+
+⚙️ 4️⃣ netstat
+Purpose:
+Displays network connections, routing tables, and interface statistics.
+Syntax:
+netstat -a
+Common Options:
+-a → Show all connections
+-t → TCP connections only
+-u → UDP connections only
+-n → Show numeric addresses
+-r → Display routing table
+Example:
+netstat -tuln
+Explanation:
+Lists active ports and services.
+Useful for checking which ports are open and what services are running.
+⚙️ 5️⃣ arp
+Purpose:
+Displays and modifies the ARP (Address Resolution Protocol) table.
+Syntax:
+arp -n
+Example:
+arp -a
+Explanation:
+ARP maps IP addresses to MAC addresses.
+Shows list of known devices on the local network.
+⚙️ 6️⃣ rarp (Reverse ARP)
+
+Purpose:
+Used to find the IP address of a machine from its MAC address (rarely used now).
+Command Example:
+rarp -a
+Explanation:Opposite of ARP.
+Mostly replaced by DHCP in modern networks.
+⚙️ 7️⃣ ip
+
+Purpose:
+Modern replacement for many old commands (ifconfig, route, etc.)
+Used to configure network interfaces, routing, and IP addresses.
+
+Syntax & Examples:
+
+ip addr show
+ip link show
+ip route show
+
+
+Explanation:
+ip addr show → shows all IP addresses assigned
+ip route show → displays routing table
+ip link set eth0 up → enable interface eth0.
+
+⚙️ 8️⃣ ifconfig
+
+Purpose:
+Used to view and configure network interface parameters (older tool, replaced by ip).
+
+Syntax:
+ifconfig
+Example:
+ifconfig eth0
+
+
+Explanation:
+
+Shows IP address, MAC address, MTU, RX/TX packets, etc.
+
+Can also be used to bring interfaces up/down.
+
+
+⚙️ 9️⃣ dig
+
+Purpose:
+Performs detailed DNS lookups (Domain Information Groper).
+
+Syntax:
+
+dig <domain name>
+
+
+Example:
+
+dig google.com
+
+
+Explanation:
+
+Provides detailed DNS info like IP, MX records, TTL, etc.
+
+
+⚙️ 🔟 route
+
+Purpose:
+Displays or modifies the IP routing table.
+
+Syntax:
+route -n
+Example:
+route
+
+
+Explanation:
+
+Shows how packets are forwarded (gateway, destination, mask).
+
+-n shows numeric IPs instead of domain names.
+
+Modern alternative: ip route show.
+
+Used for DNS troubleshooting
